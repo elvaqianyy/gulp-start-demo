@@ -1,0 +1,10 @@
+$color: #ff0000;
+@mixin getHeight($color: green) {
+  height: 1px;
+  color: $color;
+}
+.line {
+  width: 100%;
+  color: $color;
+  @include getHeight
+}
