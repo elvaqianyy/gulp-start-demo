@@ -1,10 +1,11 @@
+// 旧版gulp使用
 var gulp = require('gulp')
 var sass = require('gulp-sass')
 var del = require('del') // 清空文件
 var useref = require('gulp-useref')
 var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache'); // 只压缩修改的图片，没有修改的图片从缓存读取
-var sprite = require('gulp.spritesmith')
+var runSequence = require('run-sequence');
 
 // 基础任务
 gulp.task('hello', function () {
@@ -44,7 +45,7 @@ gulp.task('useref', function () {
   .pipe(useref())
   .pipe(gulp.dest('dist'))
 })
-// 压缩图片
+// 合并图片
 gulp.task('images', function () {
   console.log('合并图片')
   return gulp.src('app/images/**/*.+(jpg|png)')
@@ -52,19 +53,6 @@ gulp.task('images', function () {
     interlaced: true
   })))
   .pipe(gulp.dest('dist/images'))
-})
-
-// 合并雪碧图
-gulp.task('sprites', function () {
-  console.log('合并雪碧图')
-  return gulp.src('app/images/sprite/*.png')
-  .pipe(sprite({
-    imgName:'images/sprite20200222.png',  //保存合并后图片的地址
-    cssName:'css/sprite.css',   //保存合并后对于css样式的地址
-    padding:20,
-    algorithm:'binary-tree'
-  }))
-  .pipe(gulp.dest('dist/sprite'))
 })
 
 // 串行执行任务，并发任务可以任意嵌套在串行任务中

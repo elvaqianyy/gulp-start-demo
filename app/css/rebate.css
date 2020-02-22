@@ -1,0 +1,115 @@
+body {
+  font-size: 14px !important; }
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #EFEFF4;
+  margin: 0 !important; }
+
+img {
+  width: 100%;
+  height: 100%;
+  display: block; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden; }
+
+.btn {
+  width: 65px;
+  height: 24px;
+  outline: none;
+  border: 1px solid #9F9F9F;
+  background-color: transparent;
+  border-radius: 4px;
+  line-height: 24px;
+  color: #9F9F9F;
+  font-size: 10px; }
+
+.no-data {
+  text-align: center;
+  line-height: 2; }
+
+.link {
+  color: #666666;
+  text-decoration: none;
+  font-family: "PingFangSC-Regular" !important; }
+
+a, p, span {
+  white-space: normal;
+  word-break: break-all;
+  word-wrap: break-word; }
+
+.inaline {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+
+.rebate {
+  width: 100%;
+  height: 100%; }
+
+.top-module {
+  padding-top: 24px;
+  padding-bottom: 25px; }
+  .top-module .left-span,
+  .top-module .right-span {
+    display: inline-block;
+    width: 48%;
+    text-align: center;
+    color: #676767; }
+  .top-module .line {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 1px;
+    height: 60px;
+    background-color: #DCDCDD; }
+  .top-module .iconimg {
+    margin: 0 auto 11px;
+    width: 32px;
+    height: 32px; }
+
+.bottom-module {
+  background-color: #ffffff; }
+  .bottom-module #qrcode {
+    height: 171px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #DCDCDD; }
+    .bottom-module #qrcode img {
+      width: 126px;
+      height: 126px; }
+  .bottom-module .line-txt {
+    font-size: 10px;
+    text-align: center;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    .bottom-module .line-txt p {
+      color: #e72119;
+      margin-right: 20px;
+      height: 24px;
+      line-height: 24px; }
+
+.contain {
+  width: 380px;
+  margin: 0 auto; }

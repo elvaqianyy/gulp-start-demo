@@ -6,17 +6,40 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <!--build:css css/styles.min.css-->
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/line.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/rebate.css">
   <!-- endbuild -->
+  
+</head>
+<body>
+  <div class="rebate">
+    <div class="top-module contain">
+      <div class="left-span">
+        <img class="iconimg" src="images/ic_present.png" alt="">
+        <p @click="toOtherPage">100%有钱赚</p>
+        
+      </div>
+      <div class="line"></div>
+      <div class="right-span">
+        <img class="iconimg" src="images/ic_wealth.png" alt="">
+        连续三年连续奖励
+      </div>
+    </div>
+    <div class="bottom-module contain">
+      <div id="qrcode">
+        <!-- <img src="../assets/1.jpg" alt=""> -->
+      </div>
+      <div class="line-txt">
+        <!-- <p>邀请码：<span id="copytext">{{code}}</span></p> -->
+        <p>邀请码：<span id="copytext"></span></p>
+        <button class="copyBtn btn">复制</button>
+      </div>
+    </div>
+  </div>
   <!-- build:js js/main.min.js -->
+  <script src="./js/qrcode.min.js"></script>
   <script src="js/common.js"></script>
   <script src="js/method.js"></script>
   <!-- endbuild -->
-</head>
-<body>
-  <div>
-    this is a gulp demo!123
-  </div>
 </body>
 </html>
